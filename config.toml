@@ -1,7 +1,7 @@
 baseURL = "/"
 title   = "Kaushal Dokania"
 languageCode = "en-us"
-theme = "rhazdon-hello-friend-ng"
+theme = "rhazdon-hello-friend-ng" 
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
@@ -37,7 +37,7 @@ disableHugoGeneratorInject = false
   posts = "/posts/:year/:month/:title/"
 
 [author]
-  name = "Jane Doe"
+  name = "Kaushal Dokania"
 
 [blackfriday]
   hrefTargetBlank = true
@@ -55,7 +55,7 @@ disableHugoGeneratorInject = false
 
   # Metadata mostly used in document's head
   # 
-  description = "Nice theme for homepages and blogs"
+  description = "Portfolio website by Kaushal Dokania"
   keywords = ""
   images = [""]
 
@@ -129,28 +129,28 @@ disableHugoGeneratorInject = false
 
   [[params.social]]
     name = "email"
-    url  = "mailto:nobody@example.com"
+    url  = "mailto:kaushaldokania12@gmail.com"
 
   [[params.social]]
     name = "github"
-    url  = "https://github.com/"
+    url  = "https://github.com/KaushalDokania"
 
   [[params.social]]
     name = "linkedin"
-    url  = "https://www.linkedin.com/"
+    url  = "https://www.linkedin.com/in/kaushal-dokania/"
 
   [[params.social]]
     name = "stackoverflow"
-    url  = "https://www.stackoverflow.com/"
+    url  = "https://stackoverflow.com/users/8338842/kaushal-dokania"
 
 [languages]
   [languages.en]
-    subtitle  = "Hello Friend NG Theme"
+    subtitle  = "Software Developer & Tech Enthusiast"
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
   [languages.fr]
-    subtitle  = "Hello Friend NG Theme"
+    subtitle  = "Software Developer & Tech Enthusiast"
     weight    = 2
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
