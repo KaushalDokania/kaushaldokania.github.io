@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kaushaldokania.github.io/about/</loc>
+    <lastmod>2020-10-26T14:33:53+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kaushaldokania.github.io/</loc>
+    <lastmod>2020-10-26T14:33:53+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kaushaldokania.github.io/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kaushaldokania.github.io/"
+                />
+  </url>
+  
+  <url>
     <loc>https://kaushaldokania.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -13,20 +33,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://kaushaldokania.github.io/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://kaushaldokania.github.io/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://kaushaldokania.github.io/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kaushaldokania.github.io/"
                 />
   </url>
   
