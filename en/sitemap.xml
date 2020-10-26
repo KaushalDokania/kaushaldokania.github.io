@@ -3,64 +3,110 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kaushaldokania.github.io/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2020-10-26T14:33:53+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://kaushaldokania.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2020-10-26T14:33:53+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://kaushaldokania.github.io/fr/"
+                href="/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://kaushaldokania.github.io/"
+                href="/"
                 />
   </url>
   
   <url>
-    <loc>https://kaushaldokania.github.io/categories/</loc>
+    <loc>/tags/build/</loc>
+    <lastmod>2020-10-25T00:19:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/10/getting-started-with-go-packages/</loc>
+    <lastmod>2020-10-25T00:19:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/go/</loc>
+    <lastmod>2020-10-25T00:19:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/modules/</loc>
+    <lastmod>2020-10-25T00:19:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/packages/</loc>
+    <lastmod>2020-10-25T00:19:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-10-25T00:19:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-10-25T00:19:05+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://kaushaldokania.github.io/fr/categories/"
+                href="/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://kaushaldokania.github.io/categories/"
+                href="/tags/"
                 />
   </url>
   
   <url>
-    <loc>https://kaushaldokania.github.io/series/</loc>
+    <loc>/tags/customization/</loc>
+    <lastmod>2020-02-23T19:29:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/02/how-to-customize-linux-ps1-bash-prompt/</loc>
+    <lastmod>2020-02-23T19:29:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2020-02-23T19:29:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://kaushaldokania.github.io/fr/series/"
+                href="/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://kaushaldokania.github.io/series/"
+                href="/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://kaushaldokania.github.io/tags/</loc>
+    <loc>/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://kaushaldokania.github.io/fr/tags/"
+                href="/fr/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://kaushaldokania.github.io/tags/"
+                href="/series/"
                 />
   </url>
   

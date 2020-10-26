@@ -1,0 +1,228 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Kaushal Dokania</title>
+        <link>/posts/</link>
+        <description>Recent content in Posts on Kaushal Dokania</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Sun, 25 Oct 2020 00:19:05 +0530</lastBuildDate>
+        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Getting Started With Go Packages</title>
+            <link>/posts/2020/10/getting-started-with-go-packages/</link>
+            <pubDate>Sun, 25 Oct 2020 00:19:05 +0530</pubDate>
+            
+            <guid>/posts/2020/10/getting-started-with-go-packages/</guid>
+            <description>What are Go Packages? Modularity and code reusability are among the essential pillars of good software engineering practices. Functions are the first layer of code reusability in any programming language. Go takes it to another level by providing a different mechanism: packages.
+According to the official Go documentation: How to write Go code
+ Go programs are organized into packages. A package is a collection of source files in the same directory that are compiled together.</description>
+            <content type="html"><![CDATA[<h2 id="what-are-go-packages">What are Go Packages?</h2>
+<p>Modularity and code reusability are among the essential pillars of good software engineering practices. Functions are the first layer of code reusability in any programming language. Go takes it to another level by providing a different mechanism: packages.</p>
+<p>According to the official Go documentation: <a href="https://golang.org/doc/code.html#Organization">How to write Go code</a></p>
+<blockquote>
+<p>Go programs are organized into packages. A package is a collection of source files in the same directory that are compiled together. Functions, types, variables, and constants defined in one source file are visible to all other source files within the same package.</p>
+</blockquote>
+<p>In simple words, a package is a directory within a Go workspace containing one or more Go source files, which may also include other packages.</p>
+<h3 id="syntax">Syntax</h3>
+<p>Every Go source file must belong to some package. The first line of the file should declare the package name like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">package &lt;package_name&gt;
+</code></pre></div><p>All the functions, types and variables present in this source file, now belong to the declared package and can be imported in other packages using the package name(as long as they are exported).</p>
+<h3 id="example">Example</h3>
+<p>Almost all Go programs contain this line.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</code></pre></div><p><code>fmt</code> is one the core packages provided by Go installation which contains several functionalities related to input/output formatting. Once imported, we can use functions exported by this package like <code>fmt.Print()</code>, <code>fmt.Printf()</code>, <code>fmt.Scanf()</code>.</p>
+<h2 id="exported-and-un-exported-names">Exported and Un-exported names</h2>
+<p>The members of a package imported in another package can only be accessed when the are &lsquo;exported&rsquo;. A function, type or variable is said to be exported only when it&rsquo;s name starts with a capital letter.</p>
+<p>So, <strong>exported</strong> members(function, type or variable) starts with capital letters and can be accessed outside of package.</p>
+<p>While everything else which does not start with a capital letter is said to be <strong>un-exported</strong> and is visible only within the package it was declared.</p>
+<h2 id="main-package"><code>main</code> package</h2>
+<p>Like other programming languages, Go also has <code>main()</code> function as the entry point of the program. The <code>main()</code> function can only be present within a special package <code>main</code>. When <code>main</code> package is compiled it generates an executable file as output.</p>
+<p>In Go, a package can server either of the two purposes.</p>
+<ol>
+<li><em>Commands:</em> The programs with <code>main</code> package, <em>i.e.</em> with executables are called <em>Commands</em></li>
+<li><em>Packages:</em> While the others non-main packages are simply called <em>Packages</em> for code-reusability.</li>
+</ol>
+<h3 id="example-1">Example</h3>
+<p>Let&rsquo;s write a simple &lsquo;Hello World&rsquo; program to</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+    <span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+    <span style="color:#f92672">import</span> (
+        <span style="color:#e6db74">&#34;fmt&#34;</span>
+    )
+
+    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#e6db74">&#34;Hello World!&#34;</span>)
+    }
+
+</code></pre></div><p>When we run this program with the <code>go run</code> we can see the output in the console.</p>
+<p><em>Output</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ go run hello.go
+Hello World!$
+</code></pre></div><p>We can run <code>go build</code> to simply generate the executable file which then can be run directly or shared with others to run on other machine as independent executable file.</p>
+<p><em>Output</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ go build -o hello
+$ ls
+hello*  hello.go
+$ ./hello
+Hello World!$
+</code></pre></div><p>Here, the option <code>-o</code> is used to specify the name of the output file being generated</p>
+<p><strong>Note:</strong> Use <code>hello.exe</code> as the output file name for Windows systems.</p>
+<h2 id="importing-packages">Importing packages</h2>
+<p>There are two possible format/syntax to import packages in Go.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#75715e">// Multiple import statements
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;time&#34;</span>
+    <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;math/rand&#34;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#75715e">// Factored import statements
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">import</span> (
+        <span style="color:#e6db74">&#34;fmt&#34;</span>
+        <span style="color:#e6db74">&#34;time&#34;</span>
+        <span style="color:#e6db74">&#34;math/rand&#34;</span>
+    )
+</code></pre></div><p>In Go the package name is the same as the last element of the import path. Say for example, <code>rand</code> is the actual package name to be used while importing the package <code>&quot;math/rand&quot;</code></p>
+<h3 id="naming-imports">Naming imports</h3>
+<p>In Go the imports can be named as well. See below</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">import</span> (
+        <span style="color:#e6db74">&#34;fmt&#34;</span>
+        <span style="color:#e6db74">&#34;time&#34;</span>
+        <span style="color:#a6e22e">r</span> <span style="color:#e6db74">&#34;math/rand&#34;</span>
+    )
+</code></pre></div><p>Here, <code>r</code> is the named import which can be used in place of <code>rand</code> to access its member functions or types.</p>
+<h3 id="why-packages">Why packages?</h3>
+<p>The way Go bundles the packages has following benefits</p>
+<ul>
+<li><strong>Lesser naming conflicts:</strong> Multiple packages may have functions with same names</li>
+<li><strong>Code organization:</strong> Modularity pays off in the way that code organization becomes efficient and  finding the code that we want to reuse becomes easier</li>
+<li><strong>Faster compilation:</strong> Go compiler works smartly and compiles only those packages which have been modified. So, the <code>fmt</code> package which is included in most of the programs doesn&rsquo;t need to be compiled while compiling our program.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>While Go is still a fairly new langague, there are several useful <a href="https://golang.org/pkg/">standard library packages</a>. Go&rsquo;s package management provides lot of flexibility and helps fasten the development by better code organization.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>How to Customize Linux PS1 Bash Prompt</title>
+            <link>/posts/2020/02/how-to-customize-linux-ps1-bash-prompt/</link>
+            <pubDate>Sun, 23 Feb 2020 19:29:00 +0530</pubDate>
+            
+            <guid>/posts/2020/02/how-to-customize-linux-ps1-bash-prompt/</guid>
+            <description>We spend a lot of time on Linux bash shell either using Git, writing/running scripts, building/serving applications or analyzing server logs. That&amp;rsquo;s why we need a bash prompt which gives us important information and is also easy to read. To improve the look and feel even further you can also add colors to your PS1 prompt.
+What is PS1? PS1(Prompt String 1) is one of the shell prompts available in Linux/Unix.</description>
+            <content type="html"><![CDATA[<p>We spend a lot of time on Linux bash shell either using Git, writing/running scripts, building/serving applications or analyzing server logs. That&rsquo;s why we need a bash prompt which gives us important information and is also easy to read. To improve the look and feel even further you can also add colors to your <code>PS1</code> prompt.</p>
+<h2 id="what-is-ps1">What is PS1?</h2>
+<p><code>PS1</code>(Prompt String 1) is one of the shell prompts available in Linux/Unix. Once you log into a machine, you are presented with a prompt like <code>kaushal@ubuntu:~ $</code> where you enter commands to run. Here, <strong>$</strong> represents a normal user while the root user is represented by <strong>#</strong>. On most Linux distros the <code>PS1</code> prompt displays the current user, hostname and current directory by default.</p>
+<h3 id="what-are-the-different-ps-variables">What are the different PS variables?</h3>
+<p>According to the bash documentation:</p>
+<pre><code>PS1    The  value  of  this parameter is expanded (see PROMPTING below)
+       and used as the primary prompt string.   The  default  value  is
+       ``\s-\v\$ ''.
+PS2    The  value of this parameter is expanded as with PS1 and used as
+       the secondary prompt string.  The default is ``&gt; ''.
+PS3    The value of this parameter is used as the prompt for the select
+       command (see SHELL GRAMMAR above).
+PS4    The  value  of  this  parameter  is expanded as with PS1 and the
+       value is printed before each command  bash  displays  during  an
+       execution  trace.  The first character of PS4 is replicated mul‐
+       tiple times, as necessary, to indicate multiple levels of  indi‐
+       rection.  The default is ``+ ''.
+</code></pre>
+<p>So, <code>PS1</code> is the the first prompt string which you see and where you enter commands to run, <code>PS2</code> is the continuation prompt which comes up in case the command you entered is incomplete or the primary command needs more inputs, <code>PS3</code> is shown when <code>select</code> command waits for input, and <code>PS4</code> shows the debugging trace line prefix during the execution of any command or script.</p>
+<h3 id="how-to-know-your-current-ps1-variable">How to know your current PS1 variable?</h3>
+<p>Simply print the <code>PS1</code> value using echo</p>
+<pre><code>echo $PS1
+</code></pre>
+<p>Output prompt: <strong>[\u@\h \W]$</strong></p>
+<p>The following is the list of escape characters supported by the PS variables in Linux.</p>
+<pre><code>\a - A bell character.
+\d - The date, in &quot;Weekday Month Date&quot; format (e.g., &quot;Tue May 26&quot;).
+\D{format} - The format is passed to strftime(3) and the result is inserted into the prompt string; an empty format results in a locale-specific time representation. The braces are required.
+\e - An escape character.
+\h - The hostname, up to the first ‘.’.
+\H - The hostname.
+\j - The number of jobs currently managed by the shell.
+\l - The basename of the shell’s terminal device name.
+\n - A newline.
+\r - A carriage return.
+\s - The name of the shell, the basename of $0 (the portion following the final slash).
+\t - The time, in 24-hour HH:MM:SS format.
+\T - The time, in 12-hour HH:MM:SS format.
+\@ - The time, in 12-hour am/pm format.
+\A - The time, in 24-hour HH:MM format.
+\u - The username of the current user.
+\v - The version of Bash (e.g., 2.00)
+\V - The release of Bash, version + patchlevel (e.g., 2.00.0)
+\w - The current working directory, with $HOME abbreviated with a tilde (uses the $PROMPT_DIRTRIM variable).
+\W - The basename of $PWD, with $HOME abbreviated with a tilde
+\! - The history number of this command.
+\# - The command number of this command.
+\$ - If the effective uid is 0, #, otherwise $.
+\nnn - The character whose ASCII code is the octal value nnn.
+\\ - A backslash.
+\[ - Begin a sequence of non-printing characters. This could be used to embed a terminal control sequence into the prompt.
+\] - End a sequence of non-printing characters.
+</code></pre>
+<h2 id="how-to-modify-or-change-the-ps1-prompt">How to modify or change the PS1 prompt?</h2>
+<p>To modify the prompt simply set the <code>PS1</code> environment variable with the desired value.</p>
+<pre><code>PS1=&quot;Welcome user&quot;
+</code></pre>
+<p>Output prompt: <strong>Welcome user</strong></p>
+<h3 id="more-examples">More Examples</h3>
+<ol>
+<li>
+<p>To set <code>PS1</code> to your current directory you can use</p>
+<pre><code> PS1=&quot;$PWD&gt; &quot;
+</code></pre>
+<p>Output prompt: <strong>/home/kaushal&gt;</strong></p>
+<p><strong>Note:</strong> This prompt is static and will not change when you move to a new directory.</p>
+</li>
+<li>
+<p>Now, let us change the prompt to display today&rsquo;s date and hostname:</p>
+<pre><code> PS1=&quot;\d \h $ &quot;
+</code></pre>
+<p>Output prompt: <strong>Sun Feb 23 ubuntu $</strong></p>
+</li>
+<li>
+<p>Below <code>PS1</code> will display date/time, hostname and the current working directory.</p>
+<pre><code> PS1=&quot;[\d \t \u@\h:\w ] $ &quot;
+</code></pre>
+<p>Output prompt: <strong>[Sun Feb 23 18:01:40 kaushal@ubuntu:~ ] $</strong></p>
+</li>
+<li>
+<p>You can also use functions in <code>PS1</code> prompt. Suppose you want to track free RAM available then add the below function in your <code>~/.bashrc</code> file</p>
+<p>free_ram () { free -m | awk &lsquo;{print $4}&rsquo; | head -2 | tail -1; }</p>
+<p>and set the <code>PS1</code> value to</p>
+<pre><code> PS1='$(free_ram)Mb [\u@\h \W]$ '
+</code></pre>
+<p>Output prompt: **1764Mb [kaushal@ubuntu ~]$</p>
+</li>
+<li>
+<p>You can also divide the prompt into multiple lines using <strong>\n</strong> for long commands</p>
+<pre><code> PS1=&quot;[\t]\w\n\u@\h:$&quot;
+</code></pre>
+<p>Output prompt:</p>
+<p><strong>[18:32:13]~/workspace<br>
+kaushal@ubuntu:$</strong></p>
+</li>
+</ol>
+<h2 id="making-the-changes-permanent">Making the changes permanent</h2>
+<p>When you set the <code>PS1</code> in the console the changes are temporarily and are available only for that session. To make the changes permanent add the <code>PS1</code> variable in your user profile file.</p>
+<pre><code>nano ~/.bashrc
+</code></pre>
+<p>To save, hit <code>CTRL + X</code> and enter <code>Y</code>. The changes will come in affect next time you login to the terminal.</p>
+<p>Modifying <code>~/.bashrc</code> causes changes to be applicable only for the current user. To make the changes permanent for all the users add the <code>PS1</code> variable to the following file</p>
+<ul>
+<li><code>/etc/bashrc</code> for Redhat and friends</li>
+<li><code>/etc/bash.bashrc</code> for Debian/Ubuntu</li>
+<li><code>/etc/bash.bashrc.local</code> for Suse and others</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Modifying the bash prompt is pretty easy and very helpful as it can display any extra information we need. We can also add styles to the <code>PS1</code> prompt using colors which makes the prompt pleasing to the eyes and more readable in case your screen is full of several commands and outputs.</p>
+<p>Thanks for reading.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

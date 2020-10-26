@@ -2,24 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kaushal Dokania</title>
-    <link>https://kaushaldokania.github.io/</link>
+    <link>/</link>
     <description>Recent content on Kaushal Dokania</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 26 Oct 2020 14:33:53 +0530</lastBuildDate>
     
-	<atom:link href="https://kaushaldokania.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://kaushaldokania.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 26 Oct 2020 14:33:53 +0530</pubDate>
       
-      <guid>https://kaushaldokania.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>Hi there, I&amp;rsquo;m Kaushal! I am a Software Developer based out of India and currently living in Bengaluru.
 I am a passionate coder and love to build stuffs. I love using Open Source software and sometimes contribute to them as well. I am fascinated by new softwares and technology. I really enjoy exploring about things and and understand how things work. Apart from this, I like to read and share my learnings and opinions via my blog.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started With Go Packages</title>
+      <link>/posts/2020/10/getting-started-with-go-packages/</link>
+      <pubDate>Sun, 25 Oct 2020 00:19:05 +0530</pubDate>
+      
+      <guid>/posts/2020/10/getting-started-with-go-packages/</guid>
+      <description>What are Go Packages? Modularity and code reusability are among the essential pillars of good software engineering practices. Functions are the first layer of code reusability in any programming language. Go takes it to another level by providing a different mechanism: packages.
+According to the official Go documentation: How to write Go code
+ Go programs are organized into packages. A package is a collection of source files in the same directory that are compiled together.</description>
+    </item>
+    
+    <item>
+      <title>How to Customize Linux PS1 Bash Prompt</title>
+      <link>/posts/2020/02/how-to-customize-linux-ps1-bash-prompt/</link>
+      <pubDate>Sun, 23 Feb 2020 19:29:00 +0530</pubDate>
+      
+      <guid>/posts/2020/02/how-to-customize-linux-ps1-bash-prompt/</guid>
+      <description>We spend a lot of time on Linux bash shell either using Git, writing/running scripts, building/serving applications or analyzing server logs. That&amp;rsquo;s why we need a bash prompt which gives us important information and is also easy to read. To improve the look and feel even further you can also add colors to your PS1 prompt.
+What is PS1? PS1(Prompt String 1) is one of the shell prompts available in Linux/Unix.</description>
     </item>
     
   </channel>
