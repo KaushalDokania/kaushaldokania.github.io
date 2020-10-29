@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kaushal Dokania</title>
-    <link>/tags/</link>
+    <link>https://kaushaldokania.github.io/tags/</link>
     <description>Recent content in Tags on Kaushal Dokania</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Sun, 25 Oct 2020 00:19:05 +0530</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kaushaldokania.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>build</title>
-      <link>/tags/build/</link>
+      <link>https://kaushaldokania.github.io/tags/build/</link>
       <pubDate>Sun, 25 Oct 2020 00:19:05 +0530</pubDate>
       
-      <guid>/tags/build/</guid>
+      <guid>https://kaushaldokania.github.io/tags/build/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
-      <link>/tags/go/</link>
+      <link>https://kaushaldokania.github.io/tags/go/</link>
       <pubDate>Sun, 25 Oct 2020 00:19:05 +0530</pubDate>
       
-      <guid>/tags/go/</guid>
+      <guid>https://kaushaldokania.github.io/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>modules</title>
-      <link>/tags/modules/</link>
+      <link>https://kaushaldokania.github.io/tags/modules/</link>
       <pubDate>Sun, 25 Oct 2020 00:19:05 +0530</pubDate>
       
-      <guid>/tags/modules/</guid>
+      <guid>https://kaushaldokania.github.io/tags/modules/</guid>
       <description></description>
     </item>
     
     <item>
       <title>packages</title>
-      <link>/tags/packages/</link>
+      <link>https://kaushaldokania.github.io/tags/packages/</link>
       <pubDate>Sun, 25 Oct 2020 00:19:05 +0530</pubDate>
       
-      <guid>/tags/packages/</guid>
+      <guid>https://kaushaldokania.github.io/tags/packages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>customization</title>
-      <link>/tags/customization/</link>
+      <link>https://kaushaldokania.github.io/tags/customization/</link>
       <pubDate>Sun, 23 Feb 2020 19:29:00 +0530</pubDate>
       
-      <guid>/tags/customization/</guid>
+      <guid>https://kaushaldokania.github.io/tags/customization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>/tags/linux/</link>
+      <link>https://kaushaldokania.github.io/tags/linux/</link>
       <pubDate>Sun, 23 Feb 2020 19:29:00 +0530</pubDate>
       
-      <guid>/tags/linux/</guid>
+      <guid>https://kaushaldokania.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
